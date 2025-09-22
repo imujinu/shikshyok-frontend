@@ -1,0 +1,238 @@
+.user-main {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; // 중앙 정렬
+  width: 1200px; // 최대 너비 설정
+  margin: 0 auto; // 중앙 정렬
+  padding: 20px; // 패딩 추가
+
+  @media (max-width: 480px) {
+    width: 100%; // 모바일 화면에 맞게 변경
+    padding: 0; // 패딩 제거
+  }
+}
+
+.header {
+  padding: 10px;
+  display: flex;
+  justify-content: center; // 중앙 정렬
+
+  .header-controls {
+    display: flex;
+    align-items: center; // 세로 정렬
+
+    .search-container {
+      display: flex;
+      align-items: center; // 세로 정렬
+
+      .area-select,
+      .search-input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        font-size: 14px; // 폰트 크기 줄임
+        height: 40px; // 동일한 높이로 설정
+      }
+
+      .area-select {
+        border-radius: 4px 0 0 4px; // 왼쪽 모서리 둥글게
+        width: 200px; // 너비 설정
+        @media (max-width: 480px) {
+          width: 140px; // 모바일 화면에 맞게 변경
+        }
+      }
+
+      .search-input {
+        border-radius: 0 4px 4px 0; // 오른쪽 모서리 둥글게
+        width: 400px; // 너비 2배로 설정
+        @media (max-width: 480px) {
+          width: 200px; // 모바일 화면에 맞게 변경
+        }
+      }
+    }
+  }
+}
+
+.banner {
+  position: relative;
+  width: 100%; // 전체 너비 사용
+  overflow: hidden; // 넘치는 부분 숨기기
+  height: 350px;
+
+  @media (max-width: 480px) {
+    height: 200px; // 모바일 화면에 맞게 변경
+  }
+
+  .slider {
+    position: relative;
+    display: flex;
+    align-items: center; // 수직 중앙 정렬
+
+    @media (max-width: 480px) {
+      width: 80%; // 모바일 화면에 맞게 변경
+      height: 100%;
+      padding: 0; // 패딩 제거
+    }
+
+    .slider-button {
+      background-color: rgba(255, 255, 255, 0.8);
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 50%;
+      margin: 0 10px; // 버튼 간격
+      transition: background-color 0.3s;
+
+      @media (max-width: 480px) {
+        margin: 0 5px; // 모바일 화면에 맞게 변경
+      }
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 1);
+      }
+    }
+
+    .banner-image {
+      width: 130%; // 너비를 1.3배로 설정
+      height: auto;
+      max-height: 400px; // 최대 높이 설정
+      object-fit: cover; // 이미지 비율 유지
+      transition: transform 0.5s; // 부드러운 전환 효과
+
+      @media (max-width: 480px) {
+        max-height: 400px; // 모바일 화면에서 최대 높이 설정
+      }
+    }
+  }
+
+  .banner-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+    @media (max-width: 480px) {
+      font-size: 2em; // 모바일 화면에 맞게 변경
+    }
+  }
+
+  .highlight {
+    color: orange;
+  }
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px; // 간격을 더 넓게 조정
+  padding: 20px;
+
+  .food-item {
+    border: 2px solid transparent;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: border 0.3s;
+
+    &:hover {
+      border: 2px solid orange; // 마우스 오버 시 주황색 테두리
+    }
+
+    .food-image {
+      height: auto;
+      width: 100%; // 이미지 너비를 100%로 설정
+      border-radius: 8px 8px 0 0; // 상단 모서리 둥글게
+    }
+
+    .food-name {
+      margin: 10px 0;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+  }
+}
+
+.store-section {
+  background-color: orange; // 배경색 설정
+  padding: 20px;
+  text-align: center;
+
+  .store-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: white;
+  }
+
+  .store-grid {
+    display: flex; // Flexbox로 변경
+    flex-wrap: wrap; // 여러 줄로 감싸기
+    justify-content: space-between; // 아이템 간격 조정
+    gap: 20px; // 아이템 간격 추가
+
+    .store-item {
+      background-color: white;
+      border-radius: 8px;
+      padding: 15px; // 패딩 추가
+      width: calc(50% - 10px); // 2개씩 배치 (간격 고려)
+      transition: box-shadow 0.3s;
+      display: flex; // Flexbox로 내부 정렬
+      align-items: center; // 세로 중앙 정렬
+
+      @media (max-width: 480px) {
+        width: 100%; // 모바일 화면에 맞게 변경
+      }
+
+      &:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .store-image {
+        width: 120px; // 이미지 크기 조정
+        height: auto;
+        border-radius: 8px;
+        margin-right: 15px; // 이미지와 텍스트 간격
+      }
+
+      .store-info {
+        display: flex;
+        flex-direction: column; // 세로 방향으로 정렬
+        justify-content: center; // 중앙 정렬
+
+        .store-name {
+          font-size: 1.5em; // 이름 크기 조정
+          font-weight: bold;
+          margin: 0; // 기본 여백 제거
+        }
+
+        .store-rating {
+          display: flex; // Flexbox로 평점과 아이콘 배치
+          align-items: center; // 세로 중앙 정렬
+          margin: 5px 0; // 여백 추가
+
+          // 평점 원 스타일
+          .rating-circle {
+            background-color: orange; // 주황색 배경
+            color: white; // 하얀 글씨
+            border-radius: 50%; // 원형으로
+            width: 30px; // 너비
+            height: 30px; // 높이
+            display: flex; // Flexbox로 중앙 정렬
+            align-items: center; // 세로 중앙 정렬
+            justify-content: center; // 가로 중앙 정렬
+            font-size: 0.9em; // 글씨 크기
+            margin-left: 10px; // 음식 이름과 간격
+          }
+        }
+
+        .store-description {
+          font-size: 0.9em; // 설명 크기 조정
+          color: #666;
+          margin: 5px 0 0 0; // 아래 여백 추가
+        }
+      }
+    }
+  }
+}

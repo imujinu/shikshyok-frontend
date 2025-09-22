@@ -1,0 +1,52 @@
+.con {
+  @media (max-width: 768px) {
+    .reviewTitle {
+      width: 80%;
+    }
+    .title {
+      width: 80%;
+      > div > p {
+        font-size: 0.8rem;
+      }
+    }
+  }
+  @media (max-width: 480px) {
+    .reviewTitle {
+      width: 80%;
+    }
+    .title {
+      width: 80%;
+      > div > p {
+        font-size: 0.7rem;
+      }
+    }
+  }
+  > section {
+    > .contentWrapper {
+      transition: height 0.35s ease;
+      @media (max-width: 768px) {
+        > .innerContent p {
+          font-size: 0.8rem;
+        }
+      }
+    }
+    @media (max-width: 768px) {
+      width: 80%;
+      > header > div > p {
+        font-size: 0.8rem;
+      }
+      button {
+        font-size: 0.8rem;
+      }
+    }
+    @media (max-width: 480px) {
+      width: 80%;
+      > header > div > p {
+        font-size: 0.7rem;
+      }
+      button {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

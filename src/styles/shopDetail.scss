@@ -1,0 +1,23 @@
+.shop-image-container {
+  display: flex;
+  justify-content: center;
+  width: 1200px;
+  height: 500px;
+  .img-sample {
+    width: 80%;
+    height: 90%;
+    margin: auto;
+    border: 1px solid coral;
+    img {
+      width: 960px;
+      height: 450px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .shop-image-container {
+    width: 480px;
+    height: 200px;
+  }
+}

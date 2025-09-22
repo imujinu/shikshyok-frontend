@@ -1,0 +1,35 @@
+main {
+  span {
+    padding: 0px !important;
+    margin: 0px !important;
+    border: none !important;
+  }
+  @media (max-width: 768px) {
+    > .con {
+      width: 80%;
+    }
+  }
+  @media (max-width: 480px) {
+    > .con {
+      width: 100%;
+      border: none !important;
+      box-shadow: none;
+      button {
+        width: 30%;
+      }
+
+      > .title {
+        width: 80%;
+      }
+      > .star {
+        width: 80%;
+        > div {
+          width: 70%;
+          img {
+            width: 12%;
+          }
+        }
+      }
+    }
+  }
+}

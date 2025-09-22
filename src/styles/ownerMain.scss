@@ -1,0 +1,44 @@
+.con {
+  > .titleBorder {
+    > .selctBox {
+      > select {
+        border: none !important;
+        background-image: url("../../public/assets/drop-down-arrow.png");
+      }
+    }
+  }
+
+  > .folderBox {
+    > .folder {
+      div {
+        background-image: url("../../public/assets/folder.png");
+        cursor: pointer;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin: 0 auto;
+    > .folderBox {
+      > .folder {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+  }
+  @media (max-width: 480px) {
+    > .folderBox {
+      border: none !important;
+      box-shadow: none !important;
+
+      > .folder {
+        > div {
+          > p {
+            font-size: 1.1em;
+          }
+        }
+      }
+    }
+  }
+}

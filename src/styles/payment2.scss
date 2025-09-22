@@ -1,0 +1,70 @@
+.wrap-container-payment2 {
+  @media (max-width: 480px) {
+    width: 100%;
+    height: 900px;
+  }
+  @media (max-width: 360px) {
+    min-width: 360px;
+  }
+  width: 1000px;
+  height: 1000px;
+  border: 2px solid blue;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  .wrap-content-payment2-1 {
+    width: 100%;
+    height: 20%;
+    // border: 1px solid red;
+
+    ul {
+      margin: 20px;
+      padding: 10px;
+      font-size: 22px;
+      font-weight: bold;
+      border: 1px solid black;
+    }
+
+    .input-container-payment2 {
+      display: flex;
+      input {
+        margin-left: 120px;
+        margin-top: 6px;
+        width: 40%;
+        border: 1px solid black;
+      }
+    }
+  }
+
+  .wrap-content-payment2-2 {
+    width: 100%;
+    height: 60%;
+    // border: 1px solid orange;
+
+    ul {
+      margin: 20px;
+      padding: 10px;
+      font-size: 22px;
+      font-weight: bold;
+      //   border: 1px solid black;
+    }
+  }
+
+  .wrap-content-payment2-3 {
+    width: 100%;
+    height: 20%;
+    // border: 1px solid green;
+
+    .wrap-content-payment2-3-1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      //   border: 1px solid purple;
+      height: 50%;
+      width: 100%;
+      font-size: 22px;
+      font-weight: bold;
+    }
+  }
+}
